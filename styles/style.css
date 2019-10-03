@@ -154,6 +154,7 @@ li {
   justify-content: center;
   padding-top: 100px;
 }
+
 .re-article-wrap {
   width: 34%; 
   margin-top: 100px;
@@ -190,6 +191,7 @@ li {
   margin-top: 160px;
   margin-left: 240px;
   z-index: 2;
+  overflow: hidden;
 }
 /* section four */
 .re-section-four {
@@ -236,12 +238,19 @@ li {
   height: 13px;
   margin-right: 10px;
   opacity: .2;
+  border: none;
 }
 [type="radio"]:hover {
-  background: #fff;
+  opacity: 1;
 }
 
+/* section five */
 
+.re-section-five {
+  width: 100%;
+  height: 793px;
+  background-color: #fff;
+}
 
 
 
