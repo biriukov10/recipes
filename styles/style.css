@@ -1,5 +1,8 @@
 body {
   font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -7,6 +10,7 @@ a {
 li {
   list-style: none;
 }
+
 .container {
   width: 100%;
   max-width: 1188px;
@@ -21,6 +25,12 @@ li {
   width: 100%;
   left: 0;
   top: 0;
+}
+.re-logo {
+  position: relative;
+}
+.re-logo img {
+  position: absolute;
 }
 .re-wrap {
   display: flex;
@@ -121,16 +131,14 @@ li {
   float: left;
   margin: 100px 0 0 0;
 }
-.container-section__one hr,
-.container-section__two hr,
-.container-section__three hr {
-  width: 60px;
-  height: 2px;
-  text-align: center;
-  background: #f57365;
-  margin-top: 0;
+.container h2::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  padding-top: 5px;
+  border-bottom: 1px solid #f57365;
 }
-
 .container-section__title {
   font-size: 1.125rem;
   margin-bottom: 5px;
@@ -165,12 +173,12 @@ li {
 .re-article-title {
   font-size: 1.125rem;
 }
-.re-article-wrap hr {
+.re-article-wrap h2::after {
+  content: "";
+  display: block;
   width: 20%;
-  height: 2px;
-  text-align: left;
-  background: #f57365;
-  margin: 0 0 15px 0;
+  padding-top: 7px;
+  border-bottom: 1px solid #f57365;
 }
 .re-article-text {
   font-family: 'Roboto', sans-serif;
@@ -248,16 +256,127 @@ li {
 
 .re-section-five {
   width: 100%;
-  height: 793px;
+  height: 100vh;
   background-color: #fff;
 }
+.re-wrapper-five {
+  height: 50px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+.re-wrapper-five h2::after {
+  content: "";
+  display: block;
+  margin: 0 auto; 
+  width: 17%;
+  padding-top: 8px;
+  border-bottom: 1px solid #f57365;
+}
+.re-five-title {
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  margin: 65px auto 10px auto;
+  text-align: center;
+}
+.re-five-gallary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  font-size: 0;
+  width: 100%;
+}
 
+.re-five__item {
+  position: relative;
+  display: inline-block;
+  width: 19.7%; 
+  color: #fdfdfd;
+  cursor: pointer;
+}
+.re-five__item h1{
+  position: absolute;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  z-index: 2;
+  top: 13vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+.re-five__item span {
+  position: absolute;
+  font-size: 1.040rem;
+  font-weight: lighter;
+  font-style: italic;
+  z-index: 2;
+  top: 10vh;
+  right: 0;
+  left: 35%;
+  bottom: 0;
+  margin: auto;
+  opacity: .7;
+}
+.re-five__item {
+  transition: all ease .3s;
+}
 
-
-
-
-
-
+.re-five-gallary:hover .re-five__item:not(:hover) {
+  opacity: 0.6;
+}
+.re-numbers {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 57px auto;
+}
+.re-numbers__item {
+  margin-left: 5%;
+}
+.re-numbers-title {
+  font-size: 2.25rem;
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+.re-numbers-text {
+  font-size: 1rem;
+  color: #222222;
+  opacity: .6;
+}
+/* footer */
+.re-footer {
+  width: 100%;
+  height: 20vh;
+  border-top: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+.re-footer-copy {
+  margin-left: 10%;
+  display: flex;
+  font-size: 1.142rem;
+  color: #cfcfcf;
+  opacity: 0.6;
+  font-weight: 400;
+}
+.design {
+  color: #cfcfcf;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.142rem;
+}
+.re-footer-adress {
+  font-weight: bold;
+  font-size: 1.142rem;
+  margin-right: 10%;
+}
 
 
 
@@ -311,7 +430,10 @@ li {
   .re-title {
     font-size: 3rem;
   }
-  
+  .re-logo {
+    margin-top: 30%;
+    left: 40%;
+  }
   .re-menu {
     display: none;
   }
